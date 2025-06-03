@@ -1,0 +1,46 @@
+.game-start {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    overflow: hidden;
+
+    .intro-box {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem 3rem;
+        border-radius: 12px;
+        max-width: 700px;
+        text-align: center;
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: #d1b464;
+            color: #000;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e0c580;
+            }
+        }
+    }
+}

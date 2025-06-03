@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.room3 {
+    background-size: cover;
+    background-position: center;
+    max-height: auto;
+    width: 100vw;
+    position: relative;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+
+    .puzzle-gate {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        max-width: 500px;
+        margin: 5rem auto;
+
+        h2 {
+            font-size: 1.8rem;
+            color: #e4c160;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            transform: scale(1.03);
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        button {
+            padding: 0.5rem 1.25rem;
+            background-color: #e4c160;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            &:hover {
+                background-color: #cfa848;
+            }
+        }
+    }
+
+    .intro-plaque {
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        max-width: 70%;
+        text-align: center;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    .statue-area {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0 5%;
+        margin-bottom: 30px;
+
+        .statue-block {
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+
+            .statue-img {
+                height: 300px;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+
+            .clue-text {
+                background-color: rgba(0, 0, 0, 0.7);
+                font-size: 0.9rem;
+                padding: 0.5rem;
+                margin-top: 10px;
+                border-radius: 8px;
+                text-shadow: 1px 1px 2px black;
+            }
+
+            .hilt-assigned {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+            }
+        }
+    }
+
+    .hilt-inventory {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .hilt-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            transition: border 0.2s;
+
+            &.selected {
+                border-color: #e4c160;
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .hilt-item {
+                width: 120px;
+                margin-bottom: 0.5rem;
+            }
+
+            .hilt-label {
+                font-size: 0.85rem;
+                color: #fff;
+                text-align: center;
+                max-width: 120px;
+            }
+        }
+    }
+
+
+    .orb-reveal {
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+
+        img {
+            width: 120px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+        }
+    }
+
+    .error-message {
+        text-align: center;
+        color: #ff8c8c;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+
+    .hint-node {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: rgba(0, 100, 0, 0.2); // transparent dark green
+        box-shadow: 0 0 6px rgba(0, 100, 0, 0.6);
+        cursor: pointer;
+        animation: greenPulse 2s infinite ease-in-out;
+        z-index: 3;
+
+        &.hint-main {
+            top: 78%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &.hint1 {
+            top: 40%;
+            left: 31%;
+        }
+
+        &.hint2 {
+            top: 45%;
+            left: 70%;
+        }
+
+        &.hint3 {
+            top: 60%;
+            left: 40%;
+        }
+
+        &.hint-hidden {
+            opacity: 0.3;
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .hint-text {
+            visibility: hidden;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        &:hover .hint-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    @keyframes greenPulse {
+        0% {
+            box-shadow: 0 0 6px rgba(0, 100, 0, 0.6);
+        }
+
+        50% {
+            box-shadow: 0 0 12px rgba(0, 100, 0, 0.8);
+        }
+
+        100% {
+            box-shadow: 0 0 6px rgba(0, 100, 0, 0.6);
+        }
+    }
+}
+
+.hilt-instructions {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    max-width: 700px;
+}

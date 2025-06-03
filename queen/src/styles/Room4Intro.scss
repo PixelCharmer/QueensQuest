@@ -1,0 +1,44 @@
+.room4intro {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+
+    .intro-text {
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 2rem;
+        max-width: 600px;
+        text-align: center;
+        border-radius: 10px;
+        font-family: 'Cinzel', serif;
+        box-shadow: 0 0 10px #ccc;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            background: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+
+            &:hover {
+                background: #666;
+            }
+        }
+    }
+}

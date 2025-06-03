@@ -1,0 +1,45 @@
+.room1-intro {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+
+    .intro-panel {
+        background: rgba(0, 0, 0, 0.75);
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        max-width: 700px;
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            background-color: #d1b464;
+            color: #000;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0.6rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e6cd89;
+            }
+        }
+    }
+}
