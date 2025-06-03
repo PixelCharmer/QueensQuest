@@ -7,7 +7,7 @@ import joy from '../assets/game-elements/masks/mask_joy.png';
 import rage from '../assets/game-elements/masks/mask_rage.png';
 import sorrow from '../assets/game-elements/masks/mask_sorrow.png';
 import serenity from '../assets/game-elements/masks/mask_serenity.png';
-import artifactAmulet from '../assets/game-elements/artifacts/artifact_amulet.png';
+import artifactAmulet from '../assets/game-elements/artifact_amulet.png';
 
 import '../styles/Room1.scss';
 

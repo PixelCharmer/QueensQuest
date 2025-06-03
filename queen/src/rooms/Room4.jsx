@@ -5,7 +5,7 @@ import dialBase from '../assets/game-elements/dial_base.png';
 import dialTop from '../assets/game-elements/dial_top.png';
 import leaflet from '../assets/game-elements/dusty_leaflet.png';
 import pages from '../assets/game-elements/dusty_pages.png';
-import gemstone from '../assets/game-elements/artifacts/artifact_gemstone.png';
+import gemstone from '../assets/game-elements/artifact_gemstone.png';
 import '../styles/Room4.scss';
 
 const symbols = ['Serpent', 'Owl', 'Wolf', 'Lion', 'Stag'];

@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import background from '../assets/backgrounds/room5.png';
-import amulet from '../assets/game-elements/artifacts/artifact_amulet.png';
-import vial from '../assets/game-elements/artifacts/artifact_vial.png';
-import orb from '../assets/game-elements/artifacts/artifact_orb.png';
-import gemstone from '../assets/game-elements/artifacts/artifact_gemstone.png';
+import amulet from '../assets/game-elements/artifact_amulet.png';
+import vial from '../assets/game-elements/artifact_vial.png';
+import orb from '../assets/game-elements/artifact_orb.png';
+import gemstone from '../assets/game-elements/artifact_gemstone.png';
 import '../styles/Room5.scss';
 
 const CORRECT_ORDER = ['amulet', 'vial', 'orb', 'gemstone'];
